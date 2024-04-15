@@ -3,8 +3,8 @@ A panel that shows score and times of violating rules of a contestant
 Children:
     self.numberBoard : wx.Panel      | show score like [self.score][self.violate]
     self.nameLabel   : wx.StaticText | show name of contestant
-Linked from:
-    BlueScore / RedScore : ScoreBar
+Constructed as:
+    From ScoreBar: BlueScore, RedScore
 Action:
     When setScore or setName called:
         (score, amount for violating rule) or name will be reset
