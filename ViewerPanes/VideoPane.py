@@ -1,3 +1,14 @@
+"""
+Panel that plays video
+Constructed as:
+    From JudgeViewer: videoPane
+Action:
+    1. when other panel adjusts time
+        set time of video
+    2. when camera is changed
+        load another vidoe
+        <bug> stops new video instead of keep palying
+"""
 import wx
 import wx.xrc
 import wx.media
