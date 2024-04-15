@@ -1,11 +1,11 @@
 """
 Contains score, name, and timeline for attacks
 Children:
-    self.RedScore      : ScorePane | Score / viotates of red  side
-    self.BlueScore     : ScorePane | Score / viotates of blue side
-    self.RedList       : TechBar   | Attacks from red  size
-    self.BlueList      : TechBar   | Attacks from blue side
-    self.timeSpecifier : wx.Slider | sets time of video, moves automatically when video playing
+    left  | self.RedScore      : ScorePane | Score / viotates of red  side
+    left  | self.BlueScore     : ScorePane | Score / viotates of blue side
+    right | self.RedList       : TechBar   | Attacks from red  size
+    right | self.BlueList      : TechBar   | Attacks from blue side
+    top   | self.timeSpecifier : wx.Slider | sets time of video, moves automatically when video playing
 Contructed as:
     From JudgeViewer: techList (VERTICAL)
                       timeLine (HORIZONTAL)
@@ -14,7 +14,7 @@ Action:
         GET time playing on video
         reset all content about time
     2. When slider draged
-        report time from self.passTime as MainFrame.passTime
+        report time from self.passTime as JudgeViewer.passTime
         reset all content about time
     3. When scroll bar dragged
         adjust part of timeline to be shown
