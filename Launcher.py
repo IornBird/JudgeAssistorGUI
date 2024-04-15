@@ -1,3 +1,6 @@
+"""
+Launches the whole program
+"""
 from MainFrame import *
 
 if __name__ == '__main__':
