@@ -1,3 +1,12 @@
+"""
+Creates panes for both
+	Judge assitor
+ 	and
+  	Analysis Result
+Children:
+	self.judge    : JudgeViewer    | Judge assistor
+	self.analysis : AnalysisViewer | analysis result
+"""
 import wx
 import threading
 
