@@ -1,3 +1,7 @@
+"""
+Blocks showing infomation
+It's not using since keep constructing and deestructing it is slow
+"""
 # -*- coding: utf-8 -*- 
 
 ###########################################################################
