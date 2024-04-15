@@ -84,14 +84,13 @@ class TechBar(wx.Panel):
                 gc.DrawRectangle(headX, headY, width, height)
                 gc.SetFont(self.GetFont(), wx.BLACK)
                 gc.DrawText(string, headX, strHeadY)
+                timeX = (self.playingTime - self.beginTime) * self.GetSize().x / self.timeInterval
+                gc.SetBrush(wx.Brush(wx.Colour(63, 63, 63)))
+                gc.DrawRectangle(timeX, 0, 1, self.GetSize().y)
             else:
                 width = self.GetSize().x * 0.95
                 height = width / 5
                 TechToken(None, (headY, headX), (height, width), c.atk, c.begin, c.score).draw(gc)
-
-        timeX = (self.playingTime - self.beginTime) * self.GetSize().x / self.timeInterval
-        gc.SetBrush(wx.Brush(wx.Colour(63, 63, 63)))
-        gc.StrokeLine(timeX, 0, timeX, self.GetSize().y)
 
     # private functions
     def getRecordInfo(self, record: TechRecord, height: float):
