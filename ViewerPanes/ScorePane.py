@@ -1,11 +1,22 @@
+"""
+A panel that shows score and times of violating rules of a contestant
+Children:
+    self.numberBoard : wx.Panel      | show score like [self.score][self.violate]
+    self.nameLabel   : wx.StaticText | show name of contestant
+Linked from:
+    BlueScore / RedScore : ScoreBar
+Action:
+    When setScore or setName called:
+        (score, amount for violating rule) or name will be reset
+    When resized:
+        Everything will be resized
+        <Bug> nameLabel will be unexpectly smaller
+"""
 import wx
 from PublicFunctions import *
 
 
 class ScorePane(wx.Panel):
-    """
-    A panel that shows score and times of violating rules of a contestant
-    """
     def __init__(self, parent, isBlue):
         super().__init__(parent)
         self.SetFont(wx.Font(36, wx.FONTFAMILY_ROMAN, wx.FONTSTYLE_NORMAL, wx.FONTWEIGHT_NORMAL))
