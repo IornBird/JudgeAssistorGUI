@@ -1,3 +1,12 @@
+"""
+A timeline for attacks from ONE contestant
+Constructed as:
+    From ScoreBar: self.RedList / self.RedList
+Action:
+    When 30 ms is passed or
+    slider or scroll dragged
+        repaint all block exists in the time interval
+"""
 import wx
 
 from TechRecord import *
