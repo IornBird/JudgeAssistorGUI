@@ -1,3 +1,18 @@
+"""
+Controls every thing in judge assister
+all children are in folder ViewerPanes
+Children:
+    left top  | self.techList  : ScoreBar  | (will be updated)
+    right top | self.videoPane : VideoPane | plays video
+    bottom    | self.timeLine  : ScoreBar  | show time line for contentants' attack
+Link:
+    1. When 30ms passed: 
+        GET time playing on video
+        reset all content about time
+    2. when any slider draged
+        SET time playing on video
+        reset all content about time
+"""
 import wx
 from ViewerPanes.ScoreBar import ScoreBar
 from ViewerPanes.VideoPane import VideoPane
@@ -9,7 +24,7 @@ class JudgeViewer(wx.Panel):
         self.CreateControls()
         self.videoNotLoad = True
         self.timer.Start(30)
-        # demo
+    # DEMO BLOCK
         self.loadVideos([
             "C:\\Users\\User\\Downloads\\explaning.mp4",
             "C:\\Users\\User\\Desktop\\source\\桂格超大便當.mp4",
@@ -19,6 +34,7 @@ class JudgeViewer(wx.Panel):
             ["Yume", [TechRecord(0, 1000, "A1", 0), TechRecord(2000, 3000, "A2", 0)]],
             ["Laura", [TechRecord(500, 1500, "A3", 0), TechRecord(2000, 2500, "A4", 0)]]
         ))
+    # END DEMO BLOCK    
 
     def CreateControls(self):
         self.timer = wx.Timer(self)
