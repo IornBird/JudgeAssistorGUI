@@ -5,7 +5,7 @@ Children:
     left top  | self.techList  : ScoreBar  | (will be updated)
     right top | self.videoPane : VideoPane | plays video
     bottom    | self.timeLine  : ScoreBar  | show time line for contentants' attack
-Link:
+Action:
     1. When 30ms passed: 
         GET time playing on video
         reset all content about time
