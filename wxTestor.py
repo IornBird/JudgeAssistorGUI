@@ -1,4 +1,7 @@
-# not a part of project
+"""
+It's test for wxPython, not a part of project
+REAL main function is in Launcher.py
+"""
 import wx
 
 
