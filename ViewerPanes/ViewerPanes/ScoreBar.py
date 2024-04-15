@@ -129,4 +129,5 @@ class ScoreBar(wx.Panel):
             self.timeSpecifier.SetValue(self.getSliderValue())
 
     def getSliderValue(self):
+        self.RedList.setFromNow(self.playingTime)
         return self.BlueList.setFromNow(self.playingTime)
